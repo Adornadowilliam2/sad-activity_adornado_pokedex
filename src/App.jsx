@@ -16,7 +16,7 @@ function App({ handleConfetti }) {
     const body = document.getElementById("input_type").value;
     const d = new Date();
 
-    fetch("https://heroku-azure.vercel.app/api/user")
+    fetch("https://pokemon-api.pokemon-api.workers.dev/")
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((item) =>
