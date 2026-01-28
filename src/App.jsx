@@ -123,11 +123,10 @@ function App({ handleConfetti }) {
             />
           </h1>
           <button
-            className="addpokemon-btn btn"
+            className="blue-button"
             onClick={() => setShowCreateForm(!showcreateForm)}
           >
-            <FontAwesomeIcon icon={faSearch} />
-            Check Pokemon
+           {showcreateForm ? ("Back to Pokedex" ) : (<>  <FontAwesomeIcon icon={faSearch} /> <span style={{ marginLeft: 5 }}>Check Pokedex</span> </>)}
           </button>
         </div>
       </div>
@@ -181,7 +180,12 @@ function App({ handleConfetti }) {
                     ></textarea>
                     <div>
                       <button
-                        className="blue-button"
+                        className="m-auto d-block btn"
+                        style={{
+                          background: "rgb(19, 119, 181)",
+                          color: "white",
+                          marginTop: 3,
+                        }}
                       >
                         <FontAwesomeIcon icon={faAdd} />
                         <span style={{ margin: 2 }}>Create</span>

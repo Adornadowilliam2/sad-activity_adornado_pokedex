@@ -103,19 +103,6 @@ body {
   background-color: #d0312d;
 }
 
-.addpokemon-btn {
-  background-color: rgb(19, 119, 181);
-  transition: 0.5s ease-in-out;
-  padding: 10px;
-  color: white;
-  border: 1px solid black;
-}
-
-.addpokemon-btn:hover {
-  cursor: pointer;
-  background-color: darkcyan;
-  transition: 1s ease-in-out;
-}
 
 @media (max-width: 440px) {
   .addpokemon-btn {
