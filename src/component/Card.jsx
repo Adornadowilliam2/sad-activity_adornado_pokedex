@@ -39,32 +39,40 @@ export default function Card({
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((item) =>
-          item.name.includes(newTitle.toLowerCase())
+          item.name.includes(newTitle.toLowerCase()),
         );
-        if (filterData.length > 0) {
-          const image = filterData[0].image;
-          const color = filterData[0].color;
-          const type = filterData[0].type;
-          const weakness = filterData[0].weakness;
-          const resistance = filterData[0].resistance;
 
-          if (newTitle && newBody) {
-            onEdit(
-              id,
-              newTitle,
-              newBody,
-              image,
-              color,
-              type,
-              weakness,
-              resistance
-            );
-            setEditMode(false);
-            setDialog(false);
-          } else {
-            notyf.error("All fields are required.");
-          }
+    
+        if (filterData.length == 0) {
+          notyf.error("Pokemon name does not exist.");
+          return;
         }
+
+        const image = filterData[0].image;
+        const color = filterData[0].color;
+        const type = filterData[0].type;
+        const weakness = filterData[0].weakness;
+        const resistance = filterData[0].resistance;
+
+        if (newTitle && newBody) {
+          onEdit(
+            id,
+            newTitle,
+            newBody,
+            image,
+            color,
+            type,
+            weakness,
+            resistance,
+          );
+          setEditMode(false);
+          setDialog(false);
+        } else {
+          notyf.error("All fields are required.");
+        }
+      })
+      .catch(() => {
+        notyf.error("Failed to fetch Pokémon data.");
       });
   };
 
