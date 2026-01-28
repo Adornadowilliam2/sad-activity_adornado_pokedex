@@ -163,7 +163,7 @@ function App({ handleConfetti }) {
             <div className="cover d-flex justify-content-center">
               <div className="pokedex">
                 <form onSubmit={onCreate}>
-                  <h1 className="text-align-center">Pokedev</h1>
+                  <h1 className="text-align-center">Pokedex</h1>
                   <div className="mt-1">
                     <input
                       required
