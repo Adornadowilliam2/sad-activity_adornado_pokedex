@@ -181,12 +181,7 @@ function App({ handleConfetti }) {
                     ></textarea>
                     <div>
                       <button
-                        className="m-auto d-block btn"
-                        style={{
-                          background: "rgb(19, 119, 181)",
-                          color: "white",
-                          marginTop: 3,
-                        }}
+                        className="blue-button"
                       >
                         <FontAwesomeIcon icon={faAdd} />
                         <span style={{ margin: 2 }}>Create</span>
