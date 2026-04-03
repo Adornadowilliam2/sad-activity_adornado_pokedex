@@ -42,7 +42,6 @@ export default function Card({
           item.name.includes(newTitle.toLowerCase()),
         );
 
-    
         if (filterData.length == 0) {
           notyf.error("Pokemon name does not exist.");
           return;
@@ -80,7 +79,26 @@ export default function Card({
     color && color.length > 1
       ? `linear-gradient(${color[0]}, ${color[1]})`
       : `linear-gradient(${color[0]}, gray)`;
-
+  const pokemonTypes = [
+    "Normal",
+    "Fire",
+    "Water",
+    "Grass",
+    "Electric",
+    "Ice",
+    "Fighting",
+    "Poison",
+    "Ground",
+    "Flying",
+    "Psychic",
+    "Bug",
+    "Rock",
+    "Ghost",
+    "Dragon",
+    "Dark",
+    "Steel",
+    "Fairy",
+  ];
   return (
     <main>
       <div
